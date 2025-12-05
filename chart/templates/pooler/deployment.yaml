@@ -65,6 +65,8 @@ spec:
             - {{ include "multigres.topoServerAddresses" . | quote }}
             - --database
             - {{ .Values.postgres.database | quote }}
+            - --table-group
+            - {{ .Values.pooler.tableGroup | default "default" | quote }}
             {{- if .Values.topology.cell }}
             - --cell
             - {{ .Values.topology.cell | quote }}

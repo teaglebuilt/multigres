@@ -61,6 +61,7 @@ gateway:
 pooler:
   enabled: true
   replicas: 1
+  tableGroup: "default"  # Table group this pooler serves (required)
   extraArgs: []
   extraEnv: []
   resources: {}
